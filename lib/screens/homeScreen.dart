@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class homeScreen extends StatelessWidget {
-  homeScreen({
+class HomeScreen extends StatelessWidget {
+  HomeScreen({
     Key key,
   }) : super(key: key);
   @override

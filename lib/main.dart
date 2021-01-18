@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/screens/homeScreen.dart';
+import 'screens/homeScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Quiz App'),
     );
   }
 }
