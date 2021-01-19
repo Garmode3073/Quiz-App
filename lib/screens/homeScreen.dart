@@ -7,14 +7,24 @@ class HomeScreen extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: const Color(0xff000000),
       body: Stack(
         children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: const AssetImage('lib/assets/bg1.png'),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
           Transform.translate(
-            offset: Offset(94.0, 133.0),
+            offset: Offset(width * 0.141, height * 0.17),
             child: SizedBox(
-              width: 264.0,
+              width: width * 0.75,
               child: Text(
                 'STAR\nWARS',
                 style: TextStyle(
@@ -35,14 +45,14 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(9.7, 390.0),
+            offset: Offset(width * 0.001, height * 0.38),
             child: SizedBox(
-              width: 436.0,
+              width: width * 0.998,
               child: Text(
                 'A fun quiz app based on stars wars',
                 style: TextStyle(
                   fontFamily: 'Impact',
-                  fontSize: 26,
+                  fontSize: 24,
                   color: const Color(0xffffff06),
                   height: 3.3846153846153846,
                 ),
@@ -51,43 +61,46 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(77.0, 572.0),
+            offset: Offset(width * 0.19, 572.0),
             child: SizedBox(
-              width: 301.0,
-              height: 89.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 301.0, 89.0),
-                    size: Size(301.0, 89.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(45.0),
-                        color: const Color(0xffffff00),
+              width: width * 0.64,
+              height: height * 0.1,
+              child: FlatButton(
+                onPressed: null,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 301.0, 89.0),
+                      size: Size(301.0, 89.0),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinTop: true,
+                      pinBottom: true,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(45.0),
+                          color: const Color(0xffffff00),
+                        ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(88.0, 4.0, 126.0, 85.0),
-                    size: Size(301.0, 89.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child: Text(
-                      'PLAY',
-                      style: TextStyle(
-                        fontFamily: 'Impact',
-                        fontSize: 69,
-                        color: const Color(0xff000000),
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(88.0, 4.0, 126.0, 85.0),
+                      size: Size(301.0, 89.0),
+                      pinTop: true,
+                      pinBottom: true,
+                      fixedWidth: true,
+                      child: Text(
+                        'PLAY',
+                        style: TextStyle(
+                          fontFamily: 'Impact',
+                          fontSize: 55,
+                          color: const Color(0xff000000),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
