@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:quizapp/widgets/bg.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({
@@ -13,14 +14,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xff000000),
       body: Stack(
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('lib/assets/bg1.png'),
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
+          getbg(),
           Transform.translate(
             offset: Offset(width * 0.141, height * 0.17),
             child: SizedBox(
